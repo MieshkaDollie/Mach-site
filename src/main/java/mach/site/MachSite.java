@@ -5,6 +5,9 @@
  */
 package mach.site;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 /**
  *
  * @author Mieshke
@@ -14,8 +17,12 @@ public class MachSite {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        System.out.println("hello");
+    public static void main(String[] args) throws IOException, SQLException {
+        Database db = new Database();
+        db.connect();
+        
+//        db.createUsersTable();
+//        db.createEmpTable();
     }
     
 }
